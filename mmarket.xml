@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <menu>
+        <title>menu0</title>
+        <text>Welcome to MMarket. Enter&#10;1. Register&#10;2. Find Service&#10;3. Help</text>
+        <end>false</end>
+        <options>1,2,3</options>
+        <parent>menu0</parent>
+        <next>menu0,register,find,help</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>menu.log</filesource>
+    </menu>
+    <menu>
+        <title>register</title>
+        <text>Select your state: &#10;1. Lagos</text>
+        <end>false</end>
+        <options>1</options>
+        <parent>menu0</parent>
+        <next>register,area</next>
+        <event>nil</event>
+        <contenttype>file</contenttype>
+        <filesource>state.xml</filesource>
+    </menu>
+     <menu>
+        <title>find</title>
+        <text>Select your state: &#10;1. Lagos</text>
+        <end>false</end>
+        <options>1</options>
+        <parent>menu0</parent>
+        <next>find,area</next>
+        <event>nil</event>
+        <contenttype>file</contenttype>
+        <filesource>state.xml</filesource>
+    </menu>
+     <menu>
+        <title>area</title>
+        <text>Select your area: &#10;1. Ajah</text>
+        <end>false</end>
+        <options>1</options>
+        <parent>state</parent>
+        <next>state,business</next>
+        <event>nil</event>
+        <contenttype>file</contenttype>
+        <filesource>area.xml</filesource>
+    </menu>
+     <menu>
+        <title>business</title>
+        <text>Select your business: &#10;1. Plumber</text>
+        <end>false</end>
+        <options>1</options>
+        <parent>area</parent>
+        <next>business,done1</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>menu.log</filesource>
+    </menu>
+    <menu>
+        <title>done1</title>
+        <text>Your registration was successful!</text>
+        <end>false</end>
+        <options>1</options>
+        <parent>business</parent>
+        <next>business,area</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>menu.log</filesource>
+    </menu>
+    <menu>
+        <title>help</title>
+        <text>For help text HELP to 38122</text>
+        <end>false</end>
+        <options>1</options>
+        <parent>menu0</parent>
+        <next>menu0,help</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>menu.log</filesource>
+    </menu>
+    
+</root>

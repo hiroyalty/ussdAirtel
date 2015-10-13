@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <menu>
+        <title>menu0</title>
+        <text>Welcome to Mobile Healthcare Information . Enter&#10;1. General Health&#10;2. Pregnancy Tips&#10;3. Avoid Hypertension&#10;4. Minimize Blood Pressure&#10;5. Tuberculosis&#10;6. Others</text>
+        <end>false</end>
+        <options>1,2,3,4,5</options>
+        <parent>menu0</parent>
+        <next>menu0,general,pregnancy,hypertension,bp,tuberculosis,others</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>menu.log</filesource>
+    </menu>
+    <menu>
+        <title>weather</title>
+        <text>Select your preffered weather news\n1. Latest Publication\n2. Time of Planting\n3. Forecast</text>
+        <end>false</end>
+        <options>1,2,3</options>
+        <parent>menu0</parent>
+        <next>weather,latest_publication,time_of_plating,forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather.log</filesource>
+    </menu>
+    <menu>
+        <title>latest_publication</title>
+        <text>Rainstorm destroy several hectares of farm land in niger</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>weather</parent>
+        <next>latest_publication</next>
+        <event>get_weather</event>
+        <contenttype>xml</contenttype>
+        <filesource>weather.log</filesource>
+    </menu>
+    <menu>
+        <title>time_of_planting</title>
+        <text>Over 240 days of rainfall is expected this year in southern nigeria, so planting can begin from early april till late september</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>weather</parent>
+        <next>time_of_planting</next>
+        <event>get_weather</event>
+        <contenttype>xml</contenttype>
+        <filesource>weather.log</filesource>
+    </menu>
+    <!-- weather forcast part   ###############################-->
+    <menu>
+        <title>forecast</title>
+        <text>Select the region for the weather forecast\n1. North Central\n2. North East\n3. North West\n4. South East\n5. South West\n6. South South</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>weather</parent>
+        <next>forecast,northcentral_forecast,northeast_forecast,northwest_forecast,southeast_forecast,southwest_forecast,southsouth_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather.log</filesource>
+    </menu>
+    <menu>
+        <title>northcentral_forecast</title>
+        <text>Select the state\n1. Benue\n2. Kogi\n3. Kwara\n4. Nasarawa\n5. Niger\n6. Plateau\n7. F.C.T</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6,7</options>
+        <parent>forecast</parent>
+        <next>northcentral_forecast,benue_forecast,kogi_forecast,kwara_forecast,nasarawa_forecast,niger_forecast,plateau_forecast,abuja_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather.log</filesource>
+    </menu>
+    <menu>
+        <title>benue_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northcentral_forecast</parent>
+        <next>benue_forecast</next>
+        <event>get_weather</event>
+        <contenttype>xml</contenttype>
+        <filesource>weather/benueweather.log</filesource>
+    </menu>
+    <menu>
+        <title>kogi_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northcentral_forecast</parent>
+        <next>kogi_forecast</next>
+        <event>get_weather</event>
+        <contenttype>xml</contenttype>
+        <filesource>weather/kogiweather.log</filesource>
+    </menu>
+    <menu>
+        <title>kwara_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northcentral_forecast</parent>
+        <next>kwara_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/kwaraweather.log</filesource>
+    </menu>
+    <menu>
+        <title>nasarawa_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northcentral_forecast</parent>
+        <next>nasarawa_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/nasarawaweather.log</filesource>
+    </menu>
+    <menu>
+        <title>niger_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northcentral_forecast</parent>
+        <next>niger_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/nigerweather.log</filesource>
+    </menu>
+    <menu>
+        <title>plateau_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northcentral_forecast</parent>
+        <next>plateau_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/plateauweather.log</filesource>
+    </menu>
+    <menu>
+        <title>abuja_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northcentral_forecast</parent>
+        <next>abuja_forecast</next>
+        <event>get_weather</event>
+        <contenttype>xml</contenttype>
+        <filesource>weather/abujaweather.log</filesource>
+    </menu>
+    <!-- ########## End of North Central Weather Forecast ################# -->
+    <!-- ########## Begin of North East Weather Forecast ################# -->
+    <menu>
+        <title>northeast_forecast</title>
+        <text>Select the state\n1. Adamawa\n2. Bauchi\n3. Borno\n4. Gombe\n5. Taraba\n6. Yobe</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>forecast</parent>
+        <next>northeast_forecast,adamawa_forecast,bauchi_forecast,borno_forecast,gombe_forecast,taraba_forecast,yobe_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather.log</filesource>
+    </menu>
+    <menu>
+        <title>adamawa_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northeast_forecast</parent>
+        <next>adamawa_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/adamawaweather.log</filesource>
+    </menu>
+    <menu>
+        <title>bauchi_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northeast_forecast</parent>
+        <next>adamawa_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/bauchiweather.log</filesource>
+    </menu>
+    <menu>
+        <title>borno_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northeast_forecast</parent>
+        <next>borno_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/bornoweather.log</filesource>
+    </menu>
+    <menu>
+        <title>gombe_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northeast_forecast</parent>
+        <next>gombe_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/gombeweather.log</filesource>
+    </menu>
+    <menu>
+        <title>taraba_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northeast_forecast</parent>
+        <next>taraba_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/tarabaweather.log</filesource>
+    </menu>
+    <menu>
+        <title>yobe_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northeast_forecast</parent>
+        <next>yobe_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/yobeweather.log</filesource>
+    </menu>
+    <!-- ########## End of North East Weather Forecast ################# -->
+    <!-- #############Begin of North West Weather Forecast ############## -->
+    <menu>
+        <title>northwest_forecast</title>
+        <text>Select the state\n1. jigawa\n2. kaduna\n3. Kano\n4. Katsina\n5. kebbi\n6. Sokoto\n7. Zamfara</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6,7</options>
+        <parent>forecast</parent>
+        <next>northwest_forecast,jigawa_forecast,kaduna_forecast,kano_forecast,katsina_forecast,kebbi_forecast,sokoto_forecast,zamfara_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather.log</filesource>
+    </menu>
+    <menu>
+        <title>jigawa_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northwest_forecast</parent>
+        <next>jigawa_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/jigawaweather.log</filesource>
+    </menu>
+    <menu>
+        <title>kaduna_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northwest_forecast</parent>
+        <next>kaduna_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/kadunaweather.log</filesource>
+    </menu>
+    <menu>
+        <title>kano_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northwest_forecast</parent>
+        <next>kano_forecast</next>
+        <event>get_weather</event>
+        <contenttype>xml</contenttype>
+        <filesource>weather/kanoweather.log</filesource>
+    </menu>
+    <menu>
+        <title>katsina_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northwest_forecast</parent>
+        <next>katsina_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/katsinaweather.log</filesource>
+    </menu>
+    <menu>
+        <title>kebbi_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northwest_forecast</parent>
+        <next>kebbi_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/kebbiweather.log</filesource>
+    </menu>
+    <menu>
+        <title>sokoto_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northwest_forecast</parent>
+        <next>sokoto_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/sokotoweather.log</filesource>
+    </menu>
+    <menu>
+        <title>zamfara_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>northwest_forecast</parent>
+        <next>zamfara_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/zamfaraweather.log</filesource>
+    </menu>
+    <!-- #############End of North West weather Forecast ################# -->
+    <!-- #############Start of South West weather Forecast ################# -->
+    <menu>
+        <title>southwest_forecast</title>
+        <text>Select the state\n1. Ekiti\n2. Lagos\n3. Ogun\n4. Ondo\n5. Osun\n6. Oyo</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>forecast</parent>
+        <next>southwest_forecast,ekiti_forecast,lagos_forecast,ogun_forecast,ondo_forecast,osun_forecast,oyo_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather.log</filesource>
+    </menu>
+    <menu>
+        <title>ekiti_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>southwest_forecast</parent>
+        <next>ekiti_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/ekitiweather.log</filesource>
+    </menu>
+    <menu>
+        <title>lagos_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>southwest_forecast</parent>
+        <next>lagos_forecast</next>
+        <event>get_weather</event>
+        <contenttype>xml</contenttype>
+        <filesource>weather/lagosweather.log</filesource>
+    </menu>
+    <menu>
+        <title>ogun_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>southwest_forecast</parent>
+        <next>ogun_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/ogunweather.log</filesource>
+    </menu>
+    <menu>
+        <title>ondo_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>southwest_forecast</parent>
+        <next>ondo_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/ondoweather.log</filesource>
+    </menu>
+    <menu>
+        <title>osun_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>southwest_forecast</parent>
+        <next>osun_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/osunweather.log</filesource>
+    </menu>
+    <menu>
+        <title>oyo_forecast</title>
+        <text>An Average Temperature of 31 degrees Rainy. Planting may have to be suspended today.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>southwest_forecast</parent>
+        <next>oyo_forecast</next>
+        <event>get_weather</event>
+        <contenttype>text</contenttype>
+        <filesource>weather/oyoweather.log</filesource>
+    </menu>
+    
+    
+    <!-- #############End of South West weather Forecast ################# -->
+    <menu>
+        <title>farm_produce</title>
+        <text>To know more about your preffered product, enter:\n1. Cassava\n2. Maize\n3. Sugar Cane\n4. Groundnut\n5. Cocoa Beans\n6. Kolanut\n7. Others</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6,7</options>
+        <parent>menu0</parent>
+        <next>farm_produce,subscription,subscription,subscription,subscription,subscription,subscription,others</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>others</title>
+        <text>To know more about your preffered product, enter:\n1. Melon\n2. Palmoil\n3. Cashew\n4. Beans\n5. Plaintain\n6. Rice</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>farm_produce</parent>
+        <next>others,subscription,subscription,subscription,subscription,subscription,subscription</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>subscription</title>
+        <text>Thank you, your subscription begins today for the next 30 days!</text>
+        <end>true</end>
+        <options>0</options>
+        <parent>farm_produce</parent>
+        <next>subscription</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>market_location</title>
+        <text>You want to know about which of these markets\n1. Crops\n2. Seeds</text>
+        <end>false</end>
+        <options>1,2</options>
+        <parent>menu0</parent>
+        <next>market_location,crops,seeds</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>crops</title>
+        <text>You want to know about the market of which of these Crops\n1. Maize\n2. Cassava\n3. Cocoa</text>
+        <end>false</end>
+        <options>1,2,3</options>
+        <parent>market_location</parent>
+        <next>crops,maize_crop,cassava_crop,cocoa_crop</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <!-- introducing the region before state menu to the application flow-->
+    <menu>
+        <title>maize_crop</title>
+        <text>Select the region where you wish to find the crop market\n1. North Central\n2. North East\n3. North West\n4. South East\n5. South West\n6. South South</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>crops</parent>
+        <next>maize_crop,north_central,north_east,north_west,south_east,south_west,south_south</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>north_central</title>
+        <text>Select the state\n1. Benue\n2. Kogi\n3. Kwara\n4. Nasarawa\n5. Niger\n6. Plateau\n7. F.C.T</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6,7</options>
+        <parent>market_location</parent>
+        <next>north_central,success_mket,success_mket,success_mket,success_mket,success_mket,success_mket,success_mket</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>north_east</title>
+        <text>Select the state\n1. Adamawa\n2. Bauchi\n3. Borno\n4. Gombe\n5. Taraba\n6. Yobe</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>market_location</parent>
+        <next>north_east,success_mket,success_mket,success_mket,success_mket,success_mket,success_mket</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>north_west</title>
+        <text>Select the state\n1. jigawa\n2. kaduna\n3. Kano\n4. Katsina\n5. kebbi\n6. Sokoto\n7. Zamfara</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6,7</options>
+        <parent>market_location</parent>
+        <next>north_west,success_mket,success_mket,success_mket,success_mket,success_mket,success_mket,success_mket</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>south_east</title>
+        <text>Select the state\n1. Abia\n2. Anambra\n3. Ebonyi\n4. Enugu\n5. Imo</text>
+        <end>false</end>
+        <options>1,2,3,4,5</options>
+        <parent>market_location</parent>
+        <next>south_east,success_mket,success_mket,success_mket,success_mket,success_mket</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>south_west</title>
+        <text>Select the state\n1. Ekiti\n2. Lagos\n3. Ogun\n4. Ondo\n5. Osun\n6. Oyo</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>market_location</parent>
+        <next>south_west,success_mket,success_mket,success_mket,success_mket,success_mket,success_mket</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>south_south</title>
+        <text>Select the state\n1. Akwa Ibom\n2. Bayelsa\n3. Cross River\n4. Delta\n5. Edo\n6. Rivers</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>market_location</parent>
+        <next>south_south,success_mket,success_mket,success_mket,success_mket,success_mket,success_mket</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>cassava_crop</title>
+        <text>Select the region where you wish to find the crop market\n1. North Central\n2. North East\n3. North West\n4. South East\n5. South West\n6. South South</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>crops</parent>
+        <next>cassava_crop,north_central,north_east,north_west,south_east,south_west,south_south</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>cocoa_crop</title>
+        <text>Select the region where you wish to find the crop market\n1. North Central\n2. North East\n3. North West\n4. South East\n5. South West\n6. South South</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>crops</parent>
+        <next>cocoa_crop,north_central,north_east,north_west,south_east,south_west,south_south</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <!--menu>
+        <title>more_states</title>
+        <text>Select market state\n1. Benue\n2. Nassarawa</text>
+        <end>false</end>
+        <options>1,2</options>
+        <parent>maize_crop</parent>
+        <next>more_states,success_mket,success_mket</next>
+    </menu-->
+    <menu>
+        <title>success_mket</title>
+        <text>Thank you, you have been subscribed to market Location tips for 30 days!</text>
+        <end>true</end>
+        <options>0</options>
+        <parent>maize_crop</parent>
+        <next>success_mket</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>seeds</title>
+        <text>You want to know about the market of which of these seeds\n1. Maize\n2. palmtree\n3. Cocoa</text>
+        <end>false</end>
+        <options>1,2,3</options>
+        <parent>market_location</parent>
+        <next>seeds,maize_seed,palmtree_seed,cocoa_seed</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>maize_seed</title>
+        <text>Select the region where you wish to find the seed market\n1. North Central\n2. North East\n3. North West\n4. South East\n5. South West\n6. South South</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>seeds</parent>
+        <next>maize_seed,north_central,north_east,north_west,south_east,south_west,south_south</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>palmtree_seed</title>
+        <text>Select the region where you wish to find the seed market\n1. North Central\n2. North East\n3. North West\n4. South East\n5. South West\n6. South South</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>seeds</parent>
+        <next>palmtree_seed,north_central,north_east,north_west,south_east,south_west,south_south</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>cocoa_seed</title>
+        <text>Select the region where you wish to find the seed market\n1. North Central\n2. North East\n3. North West\n4. South East\n5. South West\n6. South South</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>seeds</parent>
+        <next>cocoa_seed,north_central,north_east,north_west,south_east,south_west,south_south</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>pest_control</title>
+        <text>Select your preffered Pest Information\n1. Grasshoper\n2. Locust\n3. Army Worms\n4. Rats\n5. Weaver Birds\n6. Termites\n7. Moth\n8. Others</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>menu0</parent>
+        <next>pest_control,pest_subscription,pest_subscription,pest_subscription,pest_subscription,pest_subscription,pest_subscription,pest_subscription,other_pests</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>other_pests</title>
+        <text>Select your preffered Pest Information\n1. Tick\n2. Weevils</text>
+        <end>false</end>
+        <options>1,2</options>
+        <parent>pest_control</parent>
+        <next>other_pests,pest_subscription,pest_subscription</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>pest_subscription</title>
+        <text>Thank you, You have been subscribed to receive daily tips for the next 30 days!</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>pest_control</parent>
+        <next>pest_subscription</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>agro_advice</title>
+        <text>Thank you, Please call agents on 32126 to give you any advice.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>menu0</parent>
+        <next>agro_advice</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>mobile_market</title>
+        <text>Select your options\n1. Register\n2. Looking for Farmer\n3. Looking for Vet Doctor\n4. Looking for Loan\n5. Looking for Insurance\n6. Looking for Fertilizer</text>
+        <end>false</end>
+        <options>1,2,3,4,5,6</options>
+        <parent>menu0</parent>
+        <next>mobile_market,register,looking_for_farmer,looking_for_vet,looking_for_loan,looking_for_insurance,looking_for_fertilizer</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>register</title>
+        <text>Thank you, Please call 32126 for registration.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>mobile_market</parent>
+        <next>register</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>looking_for_farmer</title>
+        <text>Select the type of farming\n1. Poultry\n2. Cattle\n3. Fishery\n4. Pig Rearing</text>
+        <end>false</end>
+        <options>1,2,3,4</options>
+        <parent>mobile_market</parent>
+        <next>looking_for_farmer,poultry,success_mmarket,success_mmarket,success_mmarket</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>poultry</title>
+        <text>Select the type of poultry or poultry product\n1. Eggs \n2. Chicken\n3. Broiler\n4. Turkey</text>
+        <end>false</end>
+        <options>1,2,3,4</options>
+        <parent>looking_for_farmer</parent>
+        <next>poultry,success_mmarket,success_mmarket,success_mmarket,success_mmarket</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>looking_for_vet</title>
+        <text>A vet doctor will contact you shortly</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>mobile_market</parent>
+        <next>looking_for_vet</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>looking_for_loan</title>
+        <text>A loan facility officer will contact you shortly</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>mobile_market</parent>
+        <next>looking_for_loan</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>looking_for_insurance</title>
+        <text>A insurance broker will contact you shortly</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>mobile_market</parent>
+        <next>looking_for_insurance</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>looking_for_fertilizer</title>
+        <text>A fertilizer agent will contact you shortly</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>mobile_market</parent>
+        <next>looking_for_fertilizer</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>success_mmarket</title>
+        <text>Thank you, A farmer will call you shortly.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>looking_for_farmer</parent>
+        <next>success_mmarket</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+    <menu>
+        <title>help</title>
+        <text>Thank you, Please call 32126 for help.</text>
+        <end>true</end>
+        <options>1</options>
+        <parent>menu0</parent>
+        <next>help</next>
+        <event>nil</event>
+        <contenttype>text</contenttype>
+        <filesource>produce.log</filesource>
+    </menu>
+</root>
